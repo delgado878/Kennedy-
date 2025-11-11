@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kennedy Medical Group — Recruitment</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="theme-color" content="#0f172a" />
+  <style>
+    :root {
+      --brand-1: #0ea5e9;
+      --brand-2: #6366f1;
+    }
+    details summary:focus {
+      outline: 3px solid rgba(99,102,241,0.15);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: filter 300ms ease;
+      backface-visibility: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 antialiased">
+  <!-- NAV -->
+  <header class="bg-white shadow-md sticky top-0 z-30">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="#" class="flex items-center gap-3">
+        <div class="h-10 w-10 bg-gradient-to-r from-sky-600 to-indigo-600 rounded-md flex items-center justify-center text-white font-semibold">KM</div>
+        <div>
+          <h1 class="text-lg font-semibold">Kennedy Medical Group</h1>
+          <p class="text-xs text-slate-500">Healthcare recruitment made simple</p>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="#home" class="text-slate-700 hover:text-slate-900">Home</a>
+        <a href="#about" class="text-slate-700 hover:text-slate-900">About</a>
+        <a href="#faq" class="text-slate-700 hover:text-slate-900">FAQ</a>
+        <a href="#contact" class="inline-flex items-center px-4 py-2 bg-sky-600 text-white rounded-md shadow-sm hover:opacity-95">Contact</a>
+      </nav>
+      <div class="md:hidden">
+        <button id="nav-toggle" aria-label="Open menu" class="p-2 rounded-md ring-1 ring-slate-200">
+          <svg id="nav-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+          </svg>
+          <svg id="nav-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-700 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-slate-100">
+      <div class="px-4 pt-4 pb-6 space-y-3">
+        <a href="#home" class="block text-slate-700">Home</a>
+        <a href="#about" class="block text-slate-700">About</a>
+        <a href="#faq" class="block text-slate-700">FAQ</a>
+        <a href="#contact" class="block mt-2 inline-block px-4 py-2 bg-sky-600 text-white rounded-md">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="home" class="pt-10 pb-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <section>
+        <p class="text-sm text-sky-600 font-medium">We hire healthcare staff</p>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">Find qualified medical staff fast</h2>
+        <p class="mt-4 text-slate-600 max-w-xl">Post roles. Screen applicants. Schedule interviews. You keep control of recruitment steps. You hire the right person.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#jobs" class="px-5 py-3 bg-indigo-600 text-white rounded-md shadow">View jobs</a>
+          <a href="#contact" class="px-5 py-3 ring-1 ring-slate-200 rounded-md">Contact us</a>
+        </div>
+        <div class="mt-8 grid grid-cols-2 gap-3 max-w-md">
+          <div class="p-4 rounded-lg bg-white shadow-sm">
+            <h3 class="text-sm font-medium">Average fill time</h3>
+            <p class="mt-1 text-2xl font-bold">12 days</p>
+          </div>
+          <div class="p-4 rounded-lg bg-white shadow-sm">
+            <h3 class="text-sm font-medium">Verified candidates</h3>
+            <p class="mt-1 text-2xl font-bold">8,400+</p>
+          </div>
+        </div>
+      </section>
+      <section class="relative">
+        <div class="rounded-lg overflow-hidden shadow-lg">
+          <img src="https://source.unsplash.com/800x600/?medical,team" alt="Medical team" class="w-full h-72 object-cover" />
+        </div>
+        <div class="mt-4 grid grid-cols-2 gap-3">
+          <img src="https://source.unsplash.com/400x300/?doctor,nurse" alt="Doctor and nurse" class="rounded-md object-cover h-36 w-full" />
+          <img src="https://source.unsplash.com/400x300/?hospital,reception" alt="Reception" class="rounded-md object-cover h-36 w-full" />
+        </div>
+      </section>
+    </div>
+
+    <!-- JOBS LIST -->
+    <section id="jobs" class="mt-14 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <h3 class="text-xl font-semibold">Open roles</h3>
+        <div>
+          <button id="load-jobs" class="px-4 py-2 bg-sky-600 text-white rounded-md">Load sample jobs</button>
+        </div>
+      </div>
+      <div id="jobs-list" class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
+    </section>
+  </main>
+
+  <!-- ABOUT -->
+  <section id="about" class="bg-white py-14">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-8 items-center">
+      <div>
+        <h3 class="text-2xl font-bold">About Kennedy Medical Group</h3>
+        <p class="mt-4 text-slate-600">We match healthcare teams and institutions. We handle sourcing, vetting, and interview scheduling. We support permanent and temporary placements.</p>
+        <ul class="mt-6 grid gap-3">
+          <li class="flex items-start gap-3">
+            <div class="h-9 w-9 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center">1</div>
+            <div>
+              <strong class="block">Sourcing</strong>
+              <span class="text-slate-600">You post a role. We surface active candidates.</span>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="h-9 w-9 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center">2</div>
+            <div>
+              <strong class="block">Screening</strong>
+              <span class="text-slate-600">You receive verified profiles. You choose who to interview.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <img src="https://source.unsplash.com/700x500/?medical,conference" alt="Medical meeting" class="rounded-lg shadow-md object-cover w-full h-80" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-14">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h3 class="text-2xl font-bold">FAQ</h3>
+      <div class="mt-6 space-y-4">
+        <details class="bg-white p-4 rounded-lg shadow-sm">
+          <summary class="font-medium cursor-pointer">How do you verify candidates?</summary>
+          <p class="mt-2 text-slate-600">We verify ID, certifications, and recent employment history for each applicant.</p>
+        </details>
+        <details class="bg-white p-4 rounded-lg shadow-sm">
+          <summary class="font-medium cursor-pointer">Do you handle temporary placements?</summary>
+          <p class="mt-2 text-slate-600">Yes. You select contract length and shift patterns.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="bg-slate-50 pb-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h3 class="text-2xl font-bold">Contact us</h3>
+      <p class="mt-2 text-slate-600">Send details about the role you need filled. We reply within 48 hours.</p>
+      <form id="contact-form" class="mt-6 grid gap-4 bg-white p-6 rounded-lg shadow-sm">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <input required name="firstName" placeholder="First name" class="px-3 py-2 border rounded-md" />
+          <input required name="lastName" placeholder="Last name" class="px-3 py-2 border rounded-md" />
+        </div>
+        <input required name="email" type="email" placeholder="Email address" class="px-3 py-2 border rounded-md" />
+        <input name="phone" placeholder="Phone number" class="px-3 py-2 border rounded-md" />
+        <textarea required name="message" rows="5" placeholder="Your message" class="px-3 py-2 border rounded-md"></textarea>
+        <div class="flex items-center gap-3">
+          <button type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded-md">Send message</button>
+          <div id="form-status" class="text-sm text-slate-600"></div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div>
+        <div class="flex items-center gap-3">
+          <div class="h-9 w-9 bg-gradient-to-r from-sky-600 to-indigo-600 rounded-md text-white flex items-center justify-center font-semibold">KM</div>
+          <div>
+            <div class="font-semibold">Kennedy Medical Group</div>
+            <div class="text-sm text-slate-500">Recruitment for healthcare</div>
+          </div>
+        </div>
+      </div>
+      <div class="flex gap-6">
+        <a href="#" class="text-slate-600">Privacy policy</a>
+        <a href="#" class="text-slate-600">Terms of service</a>
+      </div>
+    </div>
+    <div class="text-center text-sm text-slate-400 pb-6">© <span id="year"></span> Kennedy Medical Group. All rights reserved.</div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('year').textContent = new Date().getFullYear();
+      const navToggle = document.getElementById('nav-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const openIcon = document.getElementById('nav-open');
+      const closeIcon = document.getElementById('nav-close');
+      navToggle.addEventListener('click', function () {
+        mobileMenu.classList.toggle('hidden');
+        openIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
+      const contactForm = document.getElementById('contact-form');
+      const status = document.getElementById('form-status');
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const formData = new FormData(contactForm);
+        const data = Object.fromEntries(formData.entries());
+        if (!data.firstName || !data.email || !data.message) {
+          status.textContent = 'Please fill required fields.';
+          return;
+        }
+        status.textContent = 'Sending...';
+        window.setTimeout(function () {
+          status.textContent = 'Message sent. We will reply by email.';
+          contactForm.reset();
+        }, 900);
+      });
+
+      const jobs = [
+        {
+          id: "j-001",
+          title: "Registered Nurse, Emergency",
+          location: "London, UK",
+          type: "Full-time",
+          salary: "£36,000 - £46,000",
+          summary: "Urgent care team. Night and day shifts. Must hold NMC registration."
+        },
+        {
+          id: "j-002",
+          title: "Senior Physician, Internal Medicine",
+          location: "Manchester, UK",
+          type: "Permanent",
+          salary: "£85,000 - £110,000",
+          summary: "Lead consultant for general medicine. Experience with triage protocols required."
+        },
+        {
+          id: "j-003",
+          title: "Clinical Administrator",
+          location: "Remote",
+          type: "Contract",
+          salary: "£22 - £28 per hour",
+          summary: "Manage applicant screening and scheduling. NHS or private clinic experience preferred."
+        }
+      ];
+      document.getElementById('load-jobs').addEventListener('click', function () {
+        const list = document.getElementById('jobs-list');
+        list.innerHTML = '';
+        jobs.forEach(job => {
+          const card = document.createElement('article');
+          card.className = 'bg-white p-4 rounded-lg shadow-sm';
+          card.innerHTML = `
+            <h4 class="font-semibold">${job.title}</h4>
+            <p class="text-sm text-slate-600 mt-1">${job.location} · ${job.type}</p>
+            <p class="mt-3 text-slate-700 text-sm">${job.summary}</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-sm font-medium text-sky-600">${job.salary}</span>
+              <a href="#" class="px-3 py-1 text-sm bg-indigo-600 text-white rounded-md">Apply</a>
+            </div>
+          `;
+          list.appendChild(card);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
